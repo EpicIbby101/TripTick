@@ -4,7 +4,7 @@ import { ClerkProvider, SignedIn, SignedOut } from "@clerk/nextjs";
 
 export default function App({ Component, pageProps }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider {...pageProps}>
       <Component {...pageProps} />
     </ClerkProvider>
   );
