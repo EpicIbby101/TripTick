@@ -9,7 +9,6 @@ const Dashboard = () => {
   return (
     <div>
       <Navbar />
-      <Searchbar />
       <Recents />
       <Features />
     </div>
