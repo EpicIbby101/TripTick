@@ -9,7 +9,7 @@ export function Navbar() {
           className="h-8 mr-4 hidden md:block"
           alt="Flowbite Logo"
         />
-        <form className="w-4/5 md:w-1/3">
+        <form className="w-3/4 md:w-1/3">
           <div className="relative flex items-center w-full md:w-auto h-12 rounded-full focus-within:shadow-lg bg-white overflow-hidden">
             <div className="grid place-items-center h-full w-12 text-gray-300">
               <svg
@@ -43,7 +43,7 @@ export function Navbar() {
         </form>
         <div className="flex-grow"></div>
         <div className="" id="navbar-default">
-          <ul className="font-medium flex flex-row p-4 mt-0 md:space-x-8 mr-2 md:mr-5">
+          <ul className="font-medium flex flex-row p-4 mt-0 md:space-x-8 mr-0 md:mr-5">
             <li>
               <UserButton />
             </li>
