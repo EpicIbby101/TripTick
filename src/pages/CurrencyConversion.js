@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import { Header } from "@/components/Header";
 import CurrencyConverter from "@/components/CurrencyConverter";
 import Image from "next/image";
+import { object } from "prop-types";
 
 function CurrencyConversion() {
   const [amount1, setAmount1] = useState(1);
@@ -64,10 +65,20 @@ function CurrencyConversion() {
   }
 
   return (
+    <Fragment>
+    <Header />
     <div className="relative">
-      <Header />
-      <div className="bg-gray-700 text-white p-52">
-        <h1 className="text-center text-2xl font-bold mb-5">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/flags-of-the-world.png"
+          alt="Background"
+          fill
+          className="object-cover w-full h-full"
+          
+        />
+      </div>
+      <div className="flex flex-col justify-center items-center bg-gray-700 text-white h-screen">
+        <h1 className="text-center text-3xl font-bold mb-5 z-50">
           Convert Your Money
         </h1>
         <CurrencyConverter
@@ -86,6 +97,7 @@ function CurrencyConversion() {
         />
       </div>
     </div>
+  </Fragment>
   );
 }
 
