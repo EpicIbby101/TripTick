@@ -1,0 +1,53 @@
+import React from 'react'
+
+const ChecklistData = [
+    { item: "Passport/ Visa", category: "Documents"},
+    { item: "Copy of Passport/ Visa", category: "Documents"},
+    { item: "Tickets/ Boarding Pass", category: "Documents"},
+    { item: "Travel/ Health Insurance", category: "Documents"},
+    { item: "Drivers License", category: "Documents"},
+    { item: "Foreign Currency", category: "Financial"},
+    { item: "Emergency Money", category: "Financial"},
+    { item: "Credit/ Debit Card", category: "Financial"},
+    { item: "Itinerary", category: "Travel Aid"},
+    { item: "Maps and Directions", category: "Travel Aid"},
+    { item: "Travel Pillow/ Sleeping Mask/ Earplugs", category: "Travel Aid"},
+    { item: "Luggage Tags", category: "Travel Aid"},
+    { item: "Travel Locks", category: "Travel Aid"},
+    { item: "Cellphone/ Charger", category: "Appliances"},
+    { item: "Camera", category: "Appliances"},
+    { item: "Laptop/ iPad/ E-reader", category: "Appliances"},
+    { item: "Travel Adapter", category: "Appliances"},
+    { item: "Toothbrush/ Toothpaste", category: "Toiletries"},
+    { item: "Deodorant", category: "Toiletries"},
+    { item: "Soaps", category: "Toiletries"},
+    { item: "Towels", category: "Toiletries"},
+    { item: "Nail-care", category: "Toiletries"},
+    { item: "Tissues", category: "Toiletries"},
+    { item: "Brush/ Comb/ Hair Products", category: "Toiletries"},
+    { item: "Glasses/ Contact Lenses", category: "Toiletries"},
+    { item: "Medications", category: "Health"},
+    { item: "First Aid Kit", category: "Health"},
+    { item: "Insect Repellent", category: "Health"},
+    { item: "Vaccines/ Health and Dental Checkup", category: "Health"},
+    { item: "Hand Sanitizer", category: "Health"},
+    { item: "Underwear", category: "Clothes"},
+    { item: "Socks", category: "Clothes"},
+    { item: "Sleepwear", category: "Clothes"},
+    { item: "Shirts/ Polos", category: "Clothes"},
+    { item: "Jeans/ Trousers/ Shorts", category: "Clothes"},
+    { item: "Dress/ Skirt", category: "Clothes"},
+    { item: "Shoes", category: "Clothes"},
+    { item: "Slippers/ Flipflops", category: "Clothes"},
+    { item: "Jackets/ Coats/ Raincoat", category: "Clothes"},
+    { item: "Belt/ Ties", category: "Clothes"},
+    { item: "Scarf/ Hat/ Gloves", category: "Clothes"},
+    { item: "Sunglasses", category: "General"},
+    { item: "Sunscreen", category: "General"},
+    { item: "Umbrella", category: "General"},
+
+
+
+]
+
+export default ChecklistData
