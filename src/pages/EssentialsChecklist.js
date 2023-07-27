@@ -9,7 +9,6 @@ const EssentialsChecklist = () => {
   const [showCategory, setShowCategory] = useState({}); // State to control visibility of checklist categories
   const [customItem, setCustomItem] = useState(""); // State to manage input values of custom items
 
-
   // useEffect hook to run some logic after the component has mounted
   useEffect(() => {
     // Check if localStorage is available
@@ -105,6 +104,18 @@ const EssentialsChecklist = () => {
     }));
   };
 
+  const handleDeleteCustomItem = (index) => {
+    const updatedItems = checkedItems.filter(
+      (item, i) => !(item.custom && i === index)
+    );
+    setCheckedItems(updatedItems);
+
+    // Save the updated checklist to localStorage (if available)
+    if (typeof window !== undefined) {
+      localStorage.setItem("selectedItems", JSON.stringify(updatedItems));
+    }
+  };
+
   // Render JSX below
   return (
     <div className="bg-white shadow-md rounded-lg p-4 max-w-sm sm:max-w-md mx-auto mt-10">
@@ -156,6 +167,16 @@ const EssentialsChecklist = () => {
                     onChange={() => handleItemCheck(index)}
                   />
                   <label htmlFor={`item-${index}`}>{itemName}</label>
+
+                  {/* Delete button for custom items */}
+                  {typeof index !== "number" && (
+                    <button
+                      className="ml-2 text-red-600 hover:text-red-800"
+                      onClick={() => handleDeleteCustomItem(index)}
+                    >
+                      Delete
+                    </button>
+                  )}
                 </div>
               ))}
             </div>
