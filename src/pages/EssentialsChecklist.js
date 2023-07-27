@@ -135,7 +135,7 @@ const EssentialsChecklist = () => {
           {/* Button to toggle the visibility of the category */}
           <button
             onClick={() => toggleCategoryVisibility(category)}
-            className="btn-primary mb-2 px-2 py-0.5 flex items-center w-full justify-between bg-gray-600 rounded-md"
+            className="btn-primary mb-3 px-2 py-0.5 flex items-center w-full justify-between bg-gray-600 rounded-md"
           >
             <div className="flex items-center justify-between">
               <span>{category}</span>
@@ -193,7 +193,7 @@ const EssentialsChecklist = () => {
             value={customItem}
             onChange={(e) => setCustomItem(e.target.value)}
             placeholder="Enter custom item"
-            className="border border-gray-300 rounded-md p-2 px-10 mr-2 mb-3 text-black flex-grow"
+            className="border border-gray-300 rounded-md p-2 px-10 mr-2 mb-3 mt-2.5 text-black flex-grow"
           />
           <button
             onClick={() => {
@@ -215,9 +215,9 @@ const EssentialsChecklist = () => {
                 }
               }
             }}
-            className="bg-green-500 px-5 py-1 rounded-md hover:bg-green-700 w-full btn-secondary"
+            className="bg-green-500 pb-2 rounded-full hover:bg-green-700 w-16 text-4xl btn-secondary"
           >
-            Add Custom Item
+            +
           </button>
         </div>
       </div>
