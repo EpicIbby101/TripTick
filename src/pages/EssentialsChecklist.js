@@ -118,7 +118,7 @@ const EssentialsChecklist = () => {
 
   // Render JSX below
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 max-w-sm sm:max-w-md mx-auto mt-10">
+    <div className="bg-white shadow-md rounded-lg p-4 max-w-sm sm:max-w-md mx-auto mt-16">
       <div className="absolute top-4 left-4">
         <HomeButton />
       </div>
