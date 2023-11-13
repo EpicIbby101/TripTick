@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import ChecklistData from "@/components/ChecklistData";
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import HomeButton from "@/components/HomeButton";
+import { Header } from "@/components/Header";
 
 const EssentialsChecklist = () => {
   const [checkedItems, setCheckedItems] = useState([]); // State to keep track of checked items
@@ -118,12 +119,14 @@ const EssentialsChecklist = () => {
 
   // Render JSX below
   return (
+    <Fragment>
+    {/* <Header title="Essentials Checklist"/>  */}
     <div className="bg-white shadow-md rounded-lg p-4 max-w-sm sm:max-w-md mx-auto mt-16">
       <div className="absolute top-5 left-5">
         <HomeButton />
       </div>
       {/* Heading for the checklist */}
-      <div className="flex items-center justify-center mb-4">
+      <div className="flex items-center justify-center mb-4 ">
         <h2 className="text-black text-2xl font-semibold">
           📃Essentials Checklist📃
         </h2>
@@ -232,6 +235,7 @@ const EssentialsChecklist = () => {
         </button>
       </div>
     </div>
+    </Fragment>
   );
 };
 

@@ -10,7 +10,7 @@ function CurrencyConversion() {
   // State variables using useState
   // amount1 and amount2 represent the amounts to be converted in currency1 and currency2 respectively
   const [amount1, setAmount1] = useState(1);
-  const [amount2, setAmount2] = useState(1); 
+  const [amount2, setAmount2] = useState(1);
   // currency1 and currency2 represent the currencies for the conversion, and they are initialized with USD and EUR
   const [currency1, setCurrency1] = useState("USD");
   const [currency2, setCurrency2] = useState("EUR");
@@ -78,46 +78,45 @@ function CurrencyConversion() {
 
   // Render the component
   return (
-<Fragment>
-  <Header />
-  <div className="relative min-h-screen">
-  <div className="absolute top-5 left-5 z-20">
-        <HomeButton />
-      </div>
-    <div className="absolute inset-0 z-0">
-      <Image
-        src="/images/flags-of-the-world.png"
-        alt="Background"
-        fill
-        objectFit="cover"
-      />
-    </div>
-    <div className="flex justify-center items-center relative z-10 min-h-screen">
-      <div className="bg-gray-700 bg-opacity-90 text-white py-11 px-6 rounded-lg">
-        <h1 className="text-center text-3xl font-bold mb-5">
-          Convert Your Money
-        </h1>
-        <div className="flex flex-col items-center">
-          <CurrencyConverter
-            onAmountChange={handleAmount1Change}
-            onCurrencyChange={handleCurrency1Change}
-            currencies={Object.keys(rates)}
-            amount={amount1}
-            currency={currency1}
-          />
-          <CurrencyConverter
-            onAmountChange={handleAmount2Change}
-            onCurrencyChange={handleCurrency2Change}
-            currencies={Object.keys(rates)}
-            amount={amount2}
-            currency={currency2}
+    <Fragment>
+      <Header title="Quick Currency Converter" />
+      <div className="relative min-h-screen">
+        <div className="absolute top-5 left-5 z-20">
+          <HomeButton />
+        </div>
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/flags-of-the-world.png"
+            alt="Background"
+            fill
+            objectFit="cover"
           />
         </div>
+        <div className="flex justify-center items-center relative z-10 min-h-screen">
+          <div className="bg-gray-700 bg-opacity-90 text-white py-11 px-6 rounded-lg">
+            <h1 className="text-center text-3xl font-bold mb-5">
+              Convert Your Money
+            </h1>
+            <div className="flex flex-col items-center">
+              <CurrencyConverter
+                onAmountChange={handleAmount1Change}
+                onCurrencyChange={handleCurrency1Change}
+                currencies={Object.keys(rates)}
+                amount={amount1}
+                currency={currency1}
+              />
+              <CurrencyConverter
+                onAmountChange={handleAmount2Change}
+                onCurrencyChange={handleCurrency2Change}
+                currencies={Object.keys(rates)}
+                amount={amount2}
+                currency={currency2}
+              />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</Fragment>
-
+    </Fragment>
   );
 }
 
