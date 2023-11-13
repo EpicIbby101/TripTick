@@ -7,7 +7,6 @@ const FeatureCard = ({ feature }) => {
     <div className="bg-white p-4 rounded-md shadow-md">
       <h2 className="text-xl font-semibold">{feature.title}</h2>
       <Link href={feature.href}>
-        <a className="text-blue-500 hover:underline">Explore</a>
       </Link>
     </div>
   );
