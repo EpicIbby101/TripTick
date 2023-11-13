@@ -12,7 +12,7 @@ const HomeButton = () => {
   return (
     <button
       onClick={handleGoHome}
-      className="bg-blue-500 text-white px-2 py-1 rounded-md"
+      className="bg-blue-500 text-white px-3 py-2 rounded-lg"
     >
       <HomeIcon />
     </button>
